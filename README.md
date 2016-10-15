@@ -16,3 +16,7 @@ You can also print more information inside your program, it's up to you.
 You can also change size, player, depth limit, value table and initial state after line: `cat << EOF > input.txt`
 
 All output will be added in `total_output.txt`.
+
+## Why
+
+Instead of generate random test cases, we can actually generate `n*n` test case results base on a single `n*n` value table.

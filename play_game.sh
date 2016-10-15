@@ -40,6 +40,13 @@ rm total_output.txt
 touch total_output.txt
 for ((i=0; i<$total; i++)); do
     eval $cmd
+    cat output.txt
+    echo "-------"
+    grep '\.' output.txt > /dev/null
+    if [ $? -ne 0 ]; then
+        echo FINISH
+        exit
+    fi
     cat output.txt >> total_output.txt
     echo "-------" >> total_output.txt
     sed -i -e  $startLine',$d' input.txt
